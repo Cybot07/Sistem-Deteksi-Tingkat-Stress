@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pantau Tingkat Stres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h2>Pantau Tingkat Stres Harian</h2>
+    <p class="sub">Pantauan sederhana kondisi mental harian</p>
+
+    <label>Jam Tidur</label>
+    <input type="number" id="tidur" placeholder="Contoh: 6">
+
+    <label>Jenis Aktivitas</label>
+    <select id="jenis">
+      <option value="">Pilih jenis aktivitas</option>
+      <option value="1">Ringan</option>
+      <option value="2">Sedang</option>
+      <option value="3">Berat</option>
+    </select>
+
+    <div class="info">
+      Ringan. Duduk lama. Belajar. Kerja depan laptop.<br>
+      Sedang. Berdiri lama. Jalan jauh. Kerja lapangan ringan.<br>
+      Berat. Olahraga intens. Kerja fisik berat.
+    </div>
+
+    <label>Durasi Aktivitas (jam)</label>
+    <input type="number" id="durasi" placeholder="Contoh: 5">
+
+    <label>Catatan Aktivitas</label>
+    <textarea id="catatan" placeholder="Contoh: Deadline tugas menumpuk"></textarea>
+
+    <label>Kondisi Emosi</label>
+    <select id="emosi">
+      <option value="1">Tenang</option>
+      <option value="2">Cukup Tertekan</option>
+      <option value="3">Sangat Tertekan</option>
+    </select>
+
+    <button onclick="hitung()">Lihat Hasil</button>
+
+    <div id="hasil" class="hasil"></div>
+  </div>
+
+  <div class="card">
+    <h3>Grafik Tingkat Stres Harian</h3>
+    <canvas id="grafik"></canvas>
+    <button onclick="resetData()" class="reset">Reset Data</button>
+    <div id="infoReset" class="infoReset"></div>
+  </div>
+
+  <div class="card">
+    <h3>Riwayat Aktivitas</h3>
+    <div id="riwayat"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
